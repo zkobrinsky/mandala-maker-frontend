@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.thumbnail {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.photo-medium {
+  height: 600px;
+  width: 600px;
+  object-fit: cover;
+}
+
+.navbar-custom { 
+  background-color: lightgreen; 
+} 
+
+.newform {
+  margin: 0 auto;
+  float: none;
+  width: 30%;
+}
+
+.rainbow-button {
+  width:calc(15vw + 6px);
+  height:calc(5vw + 6px);
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+  border-radius:5px;
+  /* display:flex; */
+  align-items:center;
+  justify-content:center;
+  text-transform:uppercase;
+  font-size:2vw;
+  font-weight:bold;
+}
+
+
+.rainbow-button:hover {
+  animation:slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
+.searchbar {
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid-item {
+  margin: auto;
+  transition: all .2s ease-in-out;
+}
+
+.grid-item:hover {
+  opacity: 70%;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
