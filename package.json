@@ -10,7 +10,6 @@
     "bootstrap": "^4.5.3",
     "fakergem": "^2.1.0",
     "jquery": "^3.5.1",
-    "popper": "^1.0.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-color": "^2.19.3",
@@ -26,9 +25,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "heroku-postbuild": "npm run build",
-    "serve": "yarn add serve --save",
-    "start": "serve -s build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
