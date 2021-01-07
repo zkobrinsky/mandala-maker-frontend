@@ -1,1 +1,1 @@
-web: node yarn start
+web: node yarn http-server ./build
