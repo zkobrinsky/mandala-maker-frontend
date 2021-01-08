@@ -20,8 +20,8 @@ class Sketches extends React.Component {
         return (
         <div>
             <br></br>
-            <Form className="searchbar">
-                <FormControl type="text" value={this.state.value} onChange={event => this.setState({ value: event.target.value})} onSubmit={ event => event.preventDefault() }placeholder="Filter by title" className="mr-sm-2" />
+            <Form className="searchbar" onSubmit={ event => event.preventDefault() } >
+                <FormControl type="text" value={this.state.value} onChange={event => this.setState({ value: event.target.value})} placeholder="Filter by title" className="mr-sm-2" />
             <br></br>
             </Form>
             <Container >
