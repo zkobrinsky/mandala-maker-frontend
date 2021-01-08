@@ -1,1 +1,1 @@
-web: node ./node_modules/http-server/bin ./build
+web: node ./node_modules/.bin/http-server ./build
