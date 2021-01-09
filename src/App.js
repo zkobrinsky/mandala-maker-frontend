@@ -29,7 +29,7 @@ class App extends React.Component {
             <SandboxSketch {...props} angle={0} rotateRate={0.5} />
           )} 
             />
-          <Route exact path="/sketches" component={Sketches}/>
+          <Route path="/sketches" component={Sketches}/>
           <Route exact path="/sketches/new" component={CreateSketch}/>
           <Route exact path="/sketches/:id" render={(routerProps) => <SketchShow {...routerProps}/>}/>
 
