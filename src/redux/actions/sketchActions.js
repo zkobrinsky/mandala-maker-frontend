@@ -1,6 +1,6 @@
 export const getSketches = () => {
    return dispatch => {
-       fetch('https://mandala-maker.herokuapp.com/sketches', {
+       fetch('http://localhost:3001/sketches', {
            method: 'GET',
            headers: {
             'Content-Type': 'application/json'
@@ -13,7 +13,7 @@ export const getSketches = () => {
 
 export const getSketch = (id) => {
     return dispatch => {
-        return fetch(`https://mandala-maker.herokuapp.com/sketches/${id}`, {
+        return fetch(`http://localhost:3001/sketches/${id}`, {
             method: 'GET',
             headers: {
              'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ export const getSketch = (id) => {
 
 export const createSketch = (formData) => {
     return dispatch => {
-        return fetch('https://mandala-maker.herokuapp.com/sketches', {
+        return fetch('http://localhost:3001/sketches', {
             method: 'POST', 
             body: formData
         })
