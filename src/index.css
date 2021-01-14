@@ -75,6 +75,10 @@ code {
   transform: scale(1.05);
 }
 
+.col:hover {
+  opacity: 70%
+}
+
 
 
 
