@@ -71,7 +71,7 @@ code {
 }
 
 .grid-item:hover {
-  opacity: 70%;
+  /* opacity: 70%; */
   transform: scale(1.05);
 }
 
