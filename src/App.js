@@ -24,7 +24,7 @@ class App extends React.Component {
       <Router >
       <MyNav />
         <Switch>
-          <Route path="/sketches/new"><CreateSketch/></Route>
+          <Route path="/sketches/new">{(routerProps) => <CreateSketch {...routerProps}/>}</Route>
           <Route path="/sketches/:id">{(routerProps) => <SketchShow {...routerProps}/>}</Route>
           <Route path="/sketches"><Sketches/></Route> 
           <Route path="/">
