@@ -21,8 +21,9 @@ class Sketches extends React.Component {
         return (
         <div>
             <br></br>
-            {sorted ? (
+            {this.props.sketches === [] ? (
                 <div >
+                <br></br>
                 <ReactLoading className="loading" type={'spinningBubbles'} color={'#0275d8'} height={'10%'} width={'10%'} />
                 </div>
             ) : (
