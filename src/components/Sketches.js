@@ -19,9 +19,10 @@ class Sketches extends React.Component {
         })
 
         return (
+        
         <div>
             <br></br>
-            {this.props.sketches === [] ? (
+            {this.props.sketches.length === 0 ? (
                 <div >
                 <br></br>
                 <ReactLoading className="loading" type={'spinningBubbles'} color={'#0275d8'} height={'10%'} width={'10%'} />
