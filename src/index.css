@@ -75,11 +75,15 @@ code {
   transform: scale(1.05);
 }
 
+
 /* .col:hover {
   transition: .2s ease-in-out;
   opacity: 70%
 } */
 
+.photo-medium {
+  object-fit: contain;
+}
 
 
 
