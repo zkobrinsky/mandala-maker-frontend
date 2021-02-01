@@ -40,3 +40,7 @@
 .loading {
   margin: 0 auto;
 }
+
+canvas {
+  max-width: 100%;
+}
