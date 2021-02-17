@@ -11,6 +11,7 @@
     "bootstrap": "^4.5.3",
     "express": "^4.17.1",
     "fakergem": "^2.1.0",
+    "heroku-self-ping": "^2.0.1",
     "http-server": "^0.12.3",
     "jquery": "^3.5.1",
     "react": "^17.0.1",
