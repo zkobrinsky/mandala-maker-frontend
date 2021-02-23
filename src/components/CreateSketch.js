@@ -24,7 +24,6 @@ class CreateSketch extends React.Component {
     rainbow: false,
     placeHolder: "",
     variableLineWidth: false,
-    submitted: false,
   };
 
   componentDidMount() {
@@ -94,37 +93,30 @@ class CreateSketch extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     // conditional title to state (placeholder vs value)
-    if (this.state.submitted === false) {
-      if (e.target.querySelector("#exampleForm\\.ControlInput1").value !== "") {
-        this.setState(
-          {
-            ...this.state,
-            title: e.target.querySelector("#exampleForm\\.ControlInput1").value,
-            reflections: parseInt(
-              e.target.querySelector("#exampleForm\\.ControlSelect1").value
-            ),
-          },
-          () => this.postData(this.state)
-        );
-      } else {
-        this.setState(
-          {
-            ...this.state,
-            title: e.target.querySelector("#exampleForm\\.ControlInput1")
-              .placeholder,
-            reflections: parseInt(
-              e.target.querySelector("#exampleForm\\.ControlSelect1").value
-            ),
-          },
-          () => this.postData(this.state)
-        );
-      }
+    if (e.target.querySelector("#exampleForm\\.ControlInput1").value !== "") {
+      this.setState(
+        {
+          ...this.state,
+          title: e.target.querySelector("#exampleForm\\.ControlInput1").value,
+          reflections: parseInt(
+            e.target.querySelector("#exampleForm\\.ControlSelect1").value
+          ),
+        },
+        () => this.postData(this.state)
+      );
+    } else {
+      this.setState(
+        {
+          ...this.state,
+          title: e.target.querySelector("#exampleForm\\.ControlInput1")
+            .placeholder,
+          reflections: parseInt(
+            e.target.querySelector("#exampleForm\\.ControlSelect1").value
+          ),
+        },
+        () => this.postData(this.state)
+      );
     }
-
-    this.setState({
-      ...this.state,
-      submitted: true,
-    });
   };
 
   handleRainbowButton = () => {
@@ -165,7 +157,6 @@ class CreateSketch extends React.Component {
   };
 
   render() {
-    document.body.style.overflow = "visible";
     return (
       <div className="justify-content-center">
         <Sketch state={this.state} />
