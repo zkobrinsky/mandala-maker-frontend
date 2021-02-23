@@ -122,15 +122,10 @@ class CreateSketch extends React.Component {
       }
     }
 
-    this.setState(
-      {
-        ...this.state,
-        submitted: true,
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+    this.setState({
+      ...this.state,
+      submitted: true,
+    });
   };
 
   handleRainbowButton = () => {
@@ -148,13 +143,10 @@ class CreateSketch extends React.Component {
   };
 
   handleVariableLW = () => {
-    this.setState(
-      {
-        ...this.state,
-        variableLineWidth: !this.state.variableLineWidth,
-      },
-      () => console.log(this.state.variableLineWidth)
-    );
+    this.setState({
+      ...this.state,
+      variableLineWidth: !this.state.variableLineWidth,
+    });
   };
 
   renderOptions = (num) => {
