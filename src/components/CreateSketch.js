@@ -165,6 +165,7 @@ class CreateSketch extends React.Component {
   };
 
   render() {
+    document.body.style.overflow = "visible";
     return (
       <div className="justify-content-center">
         <Sketch state={this.state} />
