@@ -94,7 +94,7 @@ class CreateSketch extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     // conditional title to state (placeholder vs value)
-    if (!this.state.submitted) {
+    if (this.state.submitted === false) {
       if (e.target.querySelector("#exampleForm\\.ControlInput1").value !== "") {
         this.setState(
           {
@@ -120,6 +120,11 @@ class CreateSketch extends React.Component {
         );
       }
     }
+
+    this.setState({
+      ...this.state,
+      submitted: true,
+    });
   };
 
   handleRainbowButton = () => {
