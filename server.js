@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const path = require('path');
 const app = express();
+
+// did this actually do anything?:
 require('heroku-self-ping').default(process.env.APP_URL);
 
 
