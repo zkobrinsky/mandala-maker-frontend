@@ -93,9 +93,8 @@ class CreateSketch extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-
-    if (this.state.submitted === false) {
-      // conditional title to state (placeholder vs value)
+    // conditional title to state (placeholder vs value)
+    if (!this.state.submitted) {
       if (e.target.querySelector("#exampleForm\\.ControlInput1").value !== "") {
         this.setState(
           {
@@ -121,11 +120,6 @@ class CreateSketch extends React.Component {
         );
       }
     }
-
-    this.setState({
-      ...this.state,
-      submitted: true,
-    });
   };
 
   handleRainbowButton = () => {
@@ -143,10 +137,13 @@ class CreateSketch extends React.Component {
   };
 
   handleVariableLW = () => {
-    this.setState({
-      ...this.state,
-      variableLineWidth: !this.state.variableLineWidth,
-    });
+    this.setState(
+      {
+        ...this.state,
+        variableLineWidth: !this.state.variableLineWidth,
+      },
+      () => console.log(this.state.variableLineWidth)
+    );
   };
 
   renderOptions = (num) => {
@@ -163,7 +160,6 @@ class CreateSketch extends React.Component {
   };
 
   render() {
-    document.body.style.overflow = "visible";
     return (
       <div className="justify-content-center">
         <Sketch state={this.state} />
