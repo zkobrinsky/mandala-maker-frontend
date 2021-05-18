@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -25,9 +25,9 @@ code {
   margin-bottom: 20px;
 }
 
-.navbar-custom { 
-  background-color: lightgreen; 
-} 
+.navbar-custom {
+  background-color: lightgreen;
+}
 
 .newform {
   margin: 0 auto;
@@ -36,26 +36,31 @@ code {
 }
 
 .rainbow-button {
-  width:calc(15vw + 6px);
-  height:calc(5vw + 6px);
-  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-  border-radius:5px;
+  width: calc(15vw + 6px);
+  height: calc(5vw + 6px);
+  background-image: linear-gradient(
+    90deg,
+    #00c0ff 0%,
+    #ffcf00 49%,
+    #fc4f4f 80%,
+    #00c0ff 100%
+  );
+  border-radius: 5px;
   /* display:flex; */
-  align-items:center;
-  justify-content:center;
-  text-transform:uppercase;
-  font-size:2vw;
-  font-weight:bold;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 2vw;
+  font-weight: bold;
 }
 
-
 .rainbow-button:hover {
-  animation:slidebg 2s linear infinite;
+  animation: slidebg 2s linear infinite;
 }
 
 @keyframes slidebg {
   to {
-    background-position:20vw;
+    background-position: 20vw;
   }
 }
 
@@ -68,14 +73,13 @@ code {
 
 .grid-item {
   margin: auto;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .grid-item:hover {
   /* opacity: 70%; */
   transform: scale(1.05);
 }
-
 
 /* .col:hover {
   transition: .2s ease-in-out;
@@ -89,29 +93,27 @@ code {
 }  */
 
 @media only screen and (max-width: 400px) {
-.thumbnail {
-  height: 90vw;
-  width: 90vw;
-  object-fit: cover;
-}
+  .thumbnail {
+    height: 90vw;
+    width: 90vw;
+    object-fit: cover;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-.photo-medium {
-  height: 50vh;
-  width: 50vh;
-  object-fit: cover;
+  .photo-medium {
+    height: 50vh;
+    width: 50vh;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+}
+
+.image-large h1 {
   margin-bottom: 20px;
 }
+
+.sandbox {
+  overflow-y: hidden;
+  overscroll-behavior: contain;
 }
-
-.image-large h1{
-  margin-bottom: 20px;
-}
-
-
-
-
-
-
-
