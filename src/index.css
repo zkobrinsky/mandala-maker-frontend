@@ -98,6 +98,9 @@ code {
     width: 90vw;
     object-fit: cover;
   }
+  .image-large h1 {
+    font-size: 2 rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
