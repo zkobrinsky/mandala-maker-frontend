@@ -55,7 +55,7 @@ class CreateSketch extends React.Component {
     return wordChoices[parseInt(Math.random() * wordChoices.length)];
   };
 
-  handleOnChange = (e) => {
+  handleOnChange = e => {
     const key = e.target.name;
 
     this.setState({
@@ -64,7 +64,7 @@ class CreateSketch extends React.Component {
     });
   };
 
-  handleReflectionChange = (e) => {
+  handleReflectionChange = e => {
     this.props.updateReflections(+e.target.value);
   };
 
@@ -72,16 +72,16 @@ class CreateSketch extends React.Component {
     this.props.updateColor(hsl);
   };
 
-  handleColorChangeComplete = (color) => {
+  handleColorChangeComplete = color => {
     this.props.addSketchColor(color);
   };
 
-  postData = (formData) => {
+  postData = formData => {
     let canvas = document.querySelector("#defaultCanvas0");
-    canvas.toBlob((b) => {
+    canvas.toBlob(b => {
       let form = new FormData();
       form.append("image", b);
-      Object.keys(formData).forEach((key) => {
+      Object.keys(formData).forEach(key => {
         form.append(key, formData[key]);
       });
       this.props
@@ -90,8 +90,9 @@ class CreateSketch extends React.Component {
     });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
+    if (this.state.submitted === true) return;
     // conditional title to state (placeholder vs value)
     if (e.target.querySelector("#exampleForm\\.ControlInput1").value !== "") {
       this.setState(
@@ -143,7 +144,7 @@ class CreateSketch extends React.Component {
     );
   };
 
-  renderOptions = (num) => {
+  renderOptions = num => {
     const N = num;
     const arr = Array.from({ length: N }, (_, index) => index + 1);
 
@@ -174,7 +175,7 @@ class CreateSketch extends React.Component {
           min={1}
           max={25}
           step={1}
-          onChange={(value) => this.props.updateLineWidth(value)}
+          onChange={value => this.props.updateLineWidth(value)}
           value={this.props.sketch.lineWidth}
         />
 
@@ -184,7 +185,7 @@ class CreateSketch extends React.Component {
             onChangeComplete={this.handleColorChange}
             width={window.innerWidth * 0.25}
             triangle={"hide"}
-            colors={this.props.sketch.colors.map((color) => color.hex)}
+            colors={this.props.sketch.colors.map(color => color.hex)}
           />
         ) : null}
         <br></br>

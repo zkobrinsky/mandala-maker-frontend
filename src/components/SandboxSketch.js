@@ -28,7 +28,7 @@ export default () => {
     };
   };
 
-  const draw = (p5) => {
+  const draw = p5 => {
     if (bgAlpha < 0.2) {
       p5.background(0, 0, 0, bgAlpha * -1);
     }
@@ -76,7 +76,7 @@ export default () => {
     }
   };
 
-  const windowResized = (p5) => {
+  const windowResized = p5 => {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
     p5.background(0);
     p5.background(...bg, bgAlpha);

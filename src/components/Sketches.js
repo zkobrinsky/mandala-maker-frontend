@@ -17,7 +17,7 @@ class Sketches extends React.Component {
     document.body.style.overflow = "visible";
     const sorted = this.props.sketches.sort((a, b) => b.id - a.id);
 
-    let filtered = sorted.filter((sketch) => {
+    let filtered = sorted.filter(sketch => {
       return sketch.title
         .toLowerCase()
         .includes(this.state.value.toLowerCase());
@@ -41,14 +41,12 @@ class Sketches extends React.Component {
           <div>
             <Form
               className="searchbar"
-              onSubmit={(event) => event.preventDefault()}
+              onSubmit={event => event.preventDefault()}
             >
               <FormControl
                 type="text"
                 value={this.state.value}
-                onChange={(event) =>
-                  this.setState({ value: event.target.value })
-                }
+                onChange={event => this.setState({ value: event.target.value })}
                 placeholder="Filter by title"
                 className="mr-sm-2"
               />
@@ -56,7 +54,7 @@ class Sketches extends React.Component {
             </Form>
             <Container>
               <Row>
-                {filtered.map((sketch) => (
+                {filtered.map(sketch => (
                   <SketchListItem sketch={sketch} />
                 ))}
               </Row>
