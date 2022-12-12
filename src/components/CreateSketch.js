@@ -103,6 +103,7 @@ class CreateSketch extends React.Component {
           reflections: parseInt(
             e.target.querySelector("#exampleForm\\.ControlSelect1").value
           ),
+          submitted: true,
         },
         () => this.postData(this.state)
       );
@@ -115,6 +116,7 @@ class CreateSketch extends React.Component {
           reflections: parseInt(
             e.target.querySelector("#exampleForm\\.ControlSelect1").value
           ),
+          submitted: true,
         },
         () => this.postData(this.state)
       );
