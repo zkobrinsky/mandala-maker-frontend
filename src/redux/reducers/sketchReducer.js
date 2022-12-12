@@ -16,7 +16,6 @@ const sketchReducer = (
         l: Math.random(),
       },
       lineWidth: 8,
-      submitted: false,
     },
   },
   action
@@ -105,7 +104,6 @@ const sketchReducer = (
             l: Math.random(),
           },
           lineWidth: 8,
-          submitted: false,
         },
       };
 

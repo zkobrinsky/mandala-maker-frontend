@@ -24,6 +24,7 @@ class CreateSketch extends React.Component {
     rainbow: false,
     placeHolder: "",
     variableLineWidth: false,
+    submitted: false,
   };
 
   componentDidMount() {
