@@ -12,6 +12,21 @@ code {
     monospace;
 }
 
+
+.grid-item {
+  max-width: 100%;
+}
+
+@media (min-width: 500px) {
+  .grid-item {
+    max-width: 340px;
+  }
+}
+
+.grid-item p {
+  overflow: hidden;
+}
+
 .thumbnail {
   height: 300px;
   width: 300px;
